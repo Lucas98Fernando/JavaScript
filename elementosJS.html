@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Elementos Javascript</title>
+    </head>
+    <body>
+        <div id="app">
+           <input id="nome"/>
+        </div>
+        <script>
+            // Criação do elemento no JS
+            var linkElement = document.createElement('a');
+
+            // Configurar o link do elemento
+            linkElement.setAttribute('href', 'https://google.com.br');
+            linkElement.setAttribute('title', 'Site da Google');
+
+            // Configurar o texto que será exibido no lugar da URL
+            var textElement = document.createTextNode('Acesse o site aqui');
+
+            // Substituição do link pelo texto
+            // Adionando o texto que será exibido no lugar do link como um filho do mesmo
+            linkElement.appendChild(textElement);
+
+            var containerElement = document.querySelector('#app');
+            containerElement.appendChild(linkElement);
+
+            // Excluir elementos do HTML através do JS
+            var inputElement = document.querySelector('#nome');
+            containerElement.removeChild(inputElement);
+        </script>
+    </body>
+</html>

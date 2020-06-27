@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Eventos Inline</title>
+    </head>
+    <body>
+        <div id="app">
+            <!--Botões-->
+            <!--Ao clicar no botão, será exibido uma mensagem de alerta no browser--> 
+            <button onclick="mostrarAlerta()"> Clique Aqui </button>
+            <!--Ao passar o mouse por cima do botão, a mensagem de aleta será exibida-->
+            <button onmouseover="passarMouse()"> Passe o Mouse Aqui </button>
+        </div>
+
+        <script>
+            // Função para verificar se um botão foi clicado
+            function mostrarAlerta() {
+                // Função global do JS para exbir mensagens de aleta para o usuário
+                alert('O botão foi clicado !');
+            }
+            function passarMouse() {
+                alert('Você passou o mouse no botão !')
+            }
+        </script>
+    </body>
+</html>

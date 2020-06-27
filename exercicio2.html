@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercício 2 - Javascript</title>
+    </head>
+    <body>
+        <div id="app">
+                <button class="botao">Criar Novo</button>
+            <div id="box">
+            </div>
+        </div>
+
+        <script>
+            var btnElement = document.querySelector('.botao');
+            var boxElement = document.querySelector('#box');
+
+            btnElement.onclick = function() {
+                var box = document.createElement('div');
+
+                box.style.width = 50;
+                box.style.height = 50;
+                box.style.margin = 10;
+                box.style.backgroundColor = '#f00';
+
+                box.classList.add('box');
+                document.body.appendChild(box);
+
+                box.onmouseover = function() {
+                    box.style.backgroundColor = getRandomColor();
+                };
+
+                boxElement.appendChild(box);
+            }
+
+            function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+        </script>
+    </body>
+</html>

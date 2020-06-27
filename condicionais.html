@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso de JavaScript</title>
+    </head>
+    <body>
+        <script>
+            // Declaração de uma função 
+            // Não precisa declarar o tipo de retorno, nem o tipo dos parâmetros
+           function retornaSexo(sexo) {
+              // M ou F
+              // Masculino ou Feminino
+
+              /*if (sexo === 'M') {
+                  return 'Masculino'; 
+              } else if (sexo === 'F') {
+                  return 'Feminino';
+              } else {
+                  return 'Sexo indefinido';
+              }*/
+
+              switch (sexo) {
+                case 'M':
+                    return 'Masculino';
+                case 'F':
+                    return 'Feminino';
+                default:
+                    return 'Sexo indefinido';
+              }
+           }
+
+           var resultado = retornaSexo('F');
+           console.log(resultado);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Manipulados os dados da DOM</title>
+    </head>
+    <body>
+        <div id="app">
+            <!--Input e um botão-->
+            <input id="nome" type="text" name="nome"/>
+            <button class="botao">Adicionar</button>
+        </div>
+        <script>
+            // Instanciando o elemento input com id = 'nome' e atribuindo a uma variável, é a forma mais tradicional
+            // var inputElement = document.getElementById('nome');
+
+            var inputElement = document.querySelector('input[name=nome]');
+
+            // Instanciando o elemento button atravé do 'querySelector'
+            var btnElement = document.querySelector('button.botao');
+
+            // Referência funções pelo JS
+            btnElement.onclick = function() {
+                var text = inputElement.value;
+                alert(text);
+            }
+
+            /*
+                // querySelector
+                // É uma maneira diferente de instanciar elementos no JS
+                // O 'querySelector' mapeia toda a árvore DOM até encontrar o elemento que você informou
+                // Você pode informar exatamente onde o elemento está
+                var inputElement = document.querySelector('div#app input');
+                var inputElement = document.querySelector('input[name=nome]');
+            */
+        </script>
+    </body>
+</html>
